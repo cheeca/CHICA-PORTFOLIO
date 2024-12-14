@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, rgb(53, 153, 219), black);
+            color: #fff;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            background-color: #333;
+            position: sticky;
+            top: 0;
+            padding: 10px 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .navbar a {
+            color: white;
+            padding: 15px;
+            text-decoration: none;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+        }
+
+        .navbar a:hover {
+            background-color: #555;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        section {
+            border-left: 30px;
+            padding: 15px 30px;
+            margin-bottom: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        h1 {
+            text-align: center;
+            color: #14a2ce;
+            margin-top: 80px;
+            margin-bottom: 50px;
+            font-size: 2.5rem;
+        }
+
+        p {
+            color: white;
+            text-align: center;
+            line-height: 1.6;
+            font-size: 1.2rem;
+        }
+
+        h2 {
+            text-align: center;
+            margin-left: 15px;
+            color: white;
+            font-size: 1.8rem;
+            text-transform: uppercase;
+        }
+
+        ul {
+            background-color: rgb(40, 80, 112);
+            padding: 20px;
+            list-style-type: none;
+            color: white;
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        li {
+            display: inline;
+            margin-right: 15px;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+        }
+
+        table {
+            font-family: Arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        td, th {
+            border: 1px solid #0c0c0c;
+            text-align: left;
+            padding: 12px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #1e3b53;
+        }
+
+        tr:nth-child(odd) {
+            background-color: #274b66;
+        }
+
+        th {
+            background-color: #12344c;
+            color: white;
+        }
+
+        td {
+            color: #e1f5ff;
+        }
+        .center {
+            display:block;
+            margin-left:auto;
+            margin-right:auto;
+            margin-bottom:50px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            border-radius: 5%;
+        }
+
+        .project-links a {
+            color: #14a2ce;
+            text-decoration: none;
+            font-weight: bold;
+            display: block;
+            margin: 10px auto;
+            font-size: 1.5rem;
+            text-align: center;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 8px;
+            width: 80%;
+            transition: background-color 0.3s ease;
+        }
+
+        .project-links a:hover {
+            background-color: rgba(0, 0, 0, 0.9);
+            color: #fff;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #18375e;
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .navbar a {
+                padding: 10px;
+                font-size: 1.1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            table {
+                width: 100%;
+                font-size: 0.9rem;
+            }
+
+            section {
+                padding: 20px;
+            }
+
+            ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <div class="navbar">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+    <!-- Home Section -->
+    <section id="home">
+        <h1>Adrian Dino Chica</h1>
+        <p style="margin-bottom: 50px;">
+            I am a passionate Computer Science student dedicated to expanding my knowledge and skills in technology. <br> 
+            I thrive on tackling complex problems and creating innovative solutions.
+        </p>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Me</h2>
+        <p style="margin-bottom: 3%;">I am a Computer Science student with a passion for coding, cycling, and photography.</p>
+        <img src="https://i0.wp.com/digital-photography-school.com/wp-content/uploads/flickr/14863295938_e8f65ce41a_o.jpg?resize=717%2C478&ssl=1" alt="Trulli" width="500" height="333" class="center">
+    </section>
+
+    <!-- Skills Section -->
+    <h2>My Skills</h2>
+    <ul>
+        <li>HTML</li>
+        <li>Java</li>
+        <li>C++</li>
+        <li>Python</li>
+    </ul>
+
+    <!-- Projects Section -->
+<section id="projects">
+    <h2>My Projects</h2>
+    <div class="project-links" style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+        <div style="text-align: center;">
+            <a href="calculator.html" target="_blank"style="width: 336px;
+    height: 200px;" >
+                <img src="calculator.png" alt="JavaScript Calculator" style="width:300px; height:200px; border-radius:8px;">
+            </a>
+            <p style="font-size:1.2rem; margin-top:10px;">JavaScript Calculator</p>
+        </div>
+        <div style="text-align: center;"> 
+            <a href="todolist.html" target="_blank" style="width: 336px;
+    height: 200px;">
+                <img src="todolist.png" alt="Interactive To-Do List" style="width:300px; height:200px; border-radius:8px;">
+            </a>
+            <p style="font-size:1.2rem; margin-top:10px;">Interactive To-Do List</p>
+        </div>
+    </div>
+</section>
+
+
+
+
+    <!-- Work Experience Table -->
+    <table>
+        <tr>
+            <th>Job Title</th>
+            <th>Company Name</th>
+            <th>Dates</th>
+        </tr>
+        <tr>
+            <td>Software Developer</td>
+            <td>USANT</td>
+            <td>2021</td>
+        </tr>
+        <tr>
+            <td>Web Developer</td>
+            <td>USANT</td>
+            <td>2022</td>
+        </tr>
+        <tr>
+            <td>DevOps Engineer</td>
+            <td>USANT</td>
+            <td>2023</td>
+        </tr>
+    </table>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>
+            Email: <a href="mailto:adriandinochica@gmail.com" style="color: blue; text-decoration: underline;">adriandinochica@gmail.com</a>
+        </p>
+        <p>
+            Follow me on:
+            <a href="https://twitter.com/adrian-dino">Twitter</a>,
+            <a href="https://linkedin.com/adrian-dino">LinkedIn</a>,
+            <a href="https://github.com/cheeca">GitHub</a>
+        </p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Created by Adrian Chica &copy; 2024</p>
+    </footer>
+
+</body>
+</html>
