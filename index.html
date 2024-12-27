@@ -1,289 +1,169 @@
-<!DOCTYPE html>
+<!DOCTYPE html>  
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>My Portfolio - Adrian Dino Chica</title>
+    <!-- Bootstrap CSS Link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css" rel="stylesheet">
     <style>
-        html {
-            scroll-behavior: smooth;
+        .carousel-inner img {
+            height: 400px;
+            object-fit: cover;
         }
-
-        body {
-            margin: 0;
-            font-family: 'Arial', sans-serif;
-            background: linear-gradient(to right, rgb(53, 153, 219), black);
-            color: #fff;
+        .navbar-nav .nav-link:hover {
+            text-decoration: underline;
         }
-
-        .navbar {
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-            background-color: #333;
-            position: sticky;
-            top: 0;
-            padding: 10px 20px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        .card:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease;
         }
-
-        .navbar a {
-            color: white;
-            padding: 15px;
+        footer a {
             text-decoration: none;
-            font-family: 'Courier New', Courier, monospace;
-            font-weight: bold;
+            color: inherit;
         }
-
-        .navbar a:hover {
-            background-color: #555;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-
-        section {
-            border-left: 30px;
-            padding: 15px 30px;
-            margin-bottom: 20px;
-            background-color: rgba(0, 0, 0, 0.7);
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-        }
-
-        h1 {
-            text-align: center;
-            color: #14a2ce;
-            margin-top: 80px;
-            margin-bottom: 50px;
-            font-size: 2.5rem;
-        }
-
-        p {
-            color: white;
-            text-align: center;
-            line-height: 1.6;
-            font-size: 1.2rem;
-        }
-
-        h2 {
-            text-align: center;
-            margin-left: 15px;
-            color: white;
-            font-size: 1.8rem;
-            text-transform: uppercase;
-        }
-
-        ul {
-            background-color: rgb(40, 80, 112);
-            padding: 20px;
-            list-style-type: none;
-            color: white;
-            border-radius: 8px;
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-        }
-
-        li {
-            display: inline;
-            margin-right: 15px;
-            font-size: 1.2rem;
-            text-transform: uppercase;
-        }
-
-        table {
-            font-family: Arial, sans-serif;
-            border-collapse: collapse;
-            width: 100%;
-            margin-top: 20px;
-        }
-
-        td, th {
-            border: 1px solid #0c0c0c;
-            text-align: left;
-            padding: 12px;
-        }
-
-        tr:nth-child(even) {
-            background-color: #1e3b53;
-        }
-
-        tr:nth-child(odd) {
-            background-color: #274b66;
-        }
-
-        th {
-            background-color: #12344c;
-            color: white;
-        }
-
-        td {
-            color: #e1f5ff;
-        }
-        .center {
-            display:block;
-            margin-left:auto;
-            margin-right:auto;
-            margin-bottom:50px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-            border-radius: 5%;
-        }
-
-        .project-links a {
-            color: #14a2ce;
-            text-decoration: none;
-            font-weight: bold;
-            display: block;
-            margin: 10px auto;
-            font-size: 1.5rem;
-            text-align: center;
-            padding: 10px;
-            background-color: rgba(0, 0, 0, 0.7);
-            border-radius: 8px;
-            width: 80%;
-            transition: background-color 0.3s ease;
-        }
-
-        .project-links a:hover {
-            background-color: rgba(0, 0, 0, 0.9);
-            color: #fff;
-        }
-
-        footer {
-            text-align: center;
-            margin-top: 20px;
-            padding: 10px;
-            background-color: #18375e;
-            color: white;
-        }
-
-        @media (max-width: 768px) {
-            .navbar a {
-                padding: 10px;
-                font-size: 1.1rem;
-            }
-
-            h1 {
-                font-size: 2rem;
-            }
-
-            table {
-                width: 100%;
-                font-size: 0.9rem;
-            }
-
-            section {
-                padding: 20px;
-            }
-
-            ul {
-                flex-direction: column;
-                gap: 10px;
-            }
+        footer a:hover {
+            color: #007bff;
         }
     </style>
 </head>
 <body>
 
     <!-- Navigation -->
-    <div class="navbar">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#home">Adrian Dino Chica</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
     <!-- Home Section -->
-    <section id="home">
-        <h1>Adrian Dino Chica</h1>
-        <p style="margin-bottom: 50px;">
-            I am a passionate Computer Science student dedicated to expanding my knowledge and skills in technology. <br> 
-            I thrive on tackling complex problems and creating innovative solutions.
-        </p>
+    <section id="home" class="text-center text-light py-5 bg-dark">
+        <div class="container">
+            <h1>Adrian Dino Chica</h1>
+            <p class="lead">I am a passionate Computer Science student crafting intuitive and efficient solutions through code.</p>
+            <div id="carouselExampleIndicators" class="carousel slide mt-4" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="calculator.png" class="d-block w-100" alt="JavaScript Calculator Project">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>JavaScript Calculator</h5>
+                            <p>A dynamic calculator with interactive UI.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="todolist.png" class="d-block w-100" alt="Interactive To-Do List Project">
+                        <div class="carousel-caption d-none d-md-block text-muted">
+                            <h5>Interactive To-Do List</h5>
+                            <p>Track your activities effectively!</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
     </section>
 
     <!-- About Section -->
-    <section id="about">
-        <h2>About Me</h2>
-        <p style="margin-bottom: 3%;">I am a Computer Science student with a passion for coding, cycling, and photography.</p>
-        <img src="https://i0.wp.com/digital-photography-school.com/wp-content/uploads/flickr/14863295938_e8f65ce41a_o.jpg?resize=717%2C478&ssl=1" alt="Trulli" width="500" height="333" class="center">
+    <section id="about" class="container py-5">
+        <h2 class="text-center text-dark">About Me</h2>
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <p>Hello! I'm Adrian Dino Chica, a passionate Computer Science student with a love for web development, software engineering, and problem-solving. I strive to create intuitive and efficient solutions through code.</p>
+            </div>
+            <div class="col-md-6 text-center">
+                <img src="https://i0.wp.com/digital-photography-school.com/wp-content/uploads/flickr/14863295938_e8f65ce41a_o.jpg?resize=717%2C478&ssl=1" class="img-fluid rounded-3" alt="Adrian Dino Chica">
+            </div>
+        </div>
     </section>
 
-    <!-- Skills Section -->
-    <h2>My Skills</h2>
-    <ul>
-        <li>HTML</li>
-        <li>Java</li>
-        <li>C++</li>
-        <li>Python</li>
-    </ul>
-
     <!-- Projects Section -->
-<section id="projects">
-    <h2>My Projects</h2>
-    <div class="project-links" style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
-        <div style="text-align: center;">
-            <a href="calculator.html" target="_blank"style="width: 336px;
-    height: 200px;" >
-                <img src="calculator.png" alt="JavaScript Calculator" style="width:300px; height:200px; border-radius:8px;">
-            </a>
-            <p style="font-size:1.2rem; margin-top:10px;">JavaScript Calculator</p>
+    <section id="projects" class="py-5 bg-dark">
+        <div class="container">
+            <h2 class="text-center text-light mb-4">My Projects</h2>
+            <div class="row justify-content-center">
+                <!-- Project 1 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card shadow-sm">
+                        <a href="calculator.html" target="_blank">
+                            <img src="calculator.png" alt="JavaScript Calculator" class="card-img-top rounded">
+                        </a>
+                        <div class="card-body text-center">
+                            <h5 class="card-title">JavaScript Calculator</h5>
+                            <p class="card-text text-muted">A dynamic calculator with interactive UI.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card shadow-sm">
+                        <a href="todolist.html" target="_blank">
+                            <img src="todolist.png" alt="Interactive To-Do List" class="card-img-top rounded">
+                        </a>
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Interactive To-Do List</h5>
+                            <p class="card-text text-muted">Track your activities effectively!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div style="text-align: center;"> 
-            <a href="todolist.html" target="_blank" style="width: 336px;
-    height: 200px;">
-                <img src="todolist.png" alt="Interactive To-Do List" style="width:300px; height:200px; border-radius:8px;">
-            </a>
-            <p style="font-size:1.2rem; margin-top:10px;">Interactive To-Do List</p>
-        </div>
-    </div>
-</section>
-
-
-
-
-    <!-- Work Experience Table -->
-    <table>
-        <tr>
-            <th>Job Title</th>
-            <th>Company Name</th>
-            <th>Dates</th>
-        </tr>
-        <tr>
-            <td>Software Developer</td>
-            <td>USANT</td>
-            <td>2021</td>
-        </tr>
-        <tr>
-            <td>Web Developer</td>
-            <td>USANT</td>
-            <td>2022</td>
-        </tr>
-        <tr>
-            <td>DevOps Engineer</td>
-            <td>USANT</td>
-            <td>2023</td>
-        </tr>
-    </table>
+    </section>
 
     <!-- Contact Section -->
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <p>
-            Email: <a href="mailto:adriandinochica@gmail.com" style="color: blue; text-decoration: underline;">adriandinochica@gmail.com</a>
-        </p>
-        <p>
-            Follow me on:
-            <a href="https://twitter.com/adrian-dino">Twitter</a>,
-            <a href="https://linkedin.com/adrian-dino">LinkedIn</a>,
-            <a href="https://github.com/cheeca">GitHub</a>
-        </p>
+    <section id="contact" class="container my-5">
+        <h2 class="text-center text-dark mb-4">Contact Me</h2>
+        <form>
+            <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="mb-3">
+                <label for="message" class="form-label">Message</label>
+                <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Submit</button>
+        </form>
+        <div class="text-center mt-4">
+            <a href="#" class="me-3 text-dark" aria-label="LinkedIn Profile"><i class="bi bi-linkedin"></i></a>
+            <a href="#" class="me-3 text-dark" aria-label="GitHub Profile"><i class="bi bi-github"></i></a>
+            <a href="#" class="text-dark" aria-label="Twitter Profile"><i class="bi bi-twitter"></i></a>
+        </div>
     </section>
 
     <!-- Footer -->
-    <footer>
-        <p>Created by Adrian Chica &copy; 2024</p>
+    <footer class="text-center text-dark py-3">
+        <p>Created by Adrian Dino Chica &copy; 2024</p>
     </footer>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
